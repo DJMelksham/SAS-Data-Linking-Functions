@@ -1,0 +1,14 @@
+PROC FCMP ENCRYPT outlib=CFUNC.DAMIENFUNCTIONS.STRINGCOMPS;
+FUNCTION HAMMING(string1 $,string2 $);
+if missing(string1) or missing(string2) THEN return(.);
+else if string1=string2 THEN return (0);
+stringlen1=length(string1);
+stringlen2=length(string2);
+if stringlen1^=stringlen2 then return (.);
+j=0;
+do i=1 to stringlen1 by 1;
+if substr(string1,i,1)^=substr(string2,i,1) then j=j+1;
+end;
+return(j);
+endsub;
+run;
