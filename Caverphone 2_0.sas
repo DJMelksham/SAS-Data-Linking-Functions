@@ -1,4 +1,4 @@
-PROC FCMP ENCRYPT outlib=CFUNC.DAMIENFUNCTIONS.STRINGCOMPS;
+PROC FCMP outlib=CFUNC.DAMIENFUNCTIONS.STRINGCOMPS;
 
 /***********************************************************************************************************
 

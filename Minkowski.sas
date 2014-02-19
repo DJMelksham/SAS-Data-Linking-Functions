@@ -1,4 +1,4 @@
-PROC FCMP ENCRYPT outlib=CFUNC.DAMIENFUNCTIONS.STRINGCOMPS;
+PROC FCMP outlib=CFUNC.DAMIENFUNCTIONS.STRINGCOMPS;
 FUNCTION MINKOWSKI2(a1,b1,a2,b2,p);
 if missing(a1) or missing(b1) or missing(a2) or missing(b2) or missing(p) then return(.);
 distance=((ABS(a1-a2))**p+(ABS(b1-b2))**p)**(1/p);

@@ -1,4 +1,4 @@
-PROC FCMP ENCRYPT outlib=CFUNC.DAMIENFUNCTIONS.STRINGCOMPS;
+PROC FCMP outlib=CFUNC.DAMIENFUNCTIONS.STRINGCOMPS;
 FUNCTION EUCLIDEAN2(a1,b1,a2,b2);
 if missing(a1) or missing(b1) or missing(a2) or missing(b2) then return(.);
 distance=SQRT((a1-a2)**2+(b1-b2)**2);

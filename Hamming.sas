@@ -1,4 +1,4 @@
-PROC FCMP ENCRYPT outlib=CFUNC.DAMIENFUNCTIONS.STRINGCOMPS;
+PROC FCMP outlib=CFUNC.DAMIENFUNCTIONS.STRINGCOMPS;
 FUNCTION HAMMING(string1 $,string2 $);
 if missing(string1) or missing(string2) THEN return(.);
 else if string1=string2 THEN return (0);

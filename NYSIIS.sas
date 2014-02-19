@@ -1,4 +1,4 @@
-PROC FCMP ENCRYPT outlib=CFUNC.DAMIENFUNCTIONS.STRINGCOMPS;
+PROC FCMP outlib=CFUNC.DAMIENFUNCTIONS.STRINGCOMPS;
 
 /***********************************************************************************************************
 
@@ -27,17 +27,17 @@ the computational joys of the rest of the function).
 
 Why one would check for digits and return a string which terminates the function, but then have later
 a check to remove non-alpha characters and allow the function to run sucessfully is beyond me,
-so I have removed the checks for digits, and maintained the stripping of non alpha characters
-which should take care of the digits anyway.
+so I have removed the checks for digits, and maintained the stripping of non-alpha characters
+which should take care of digits anyway.
 
 The original code returned a message of "no numerics allowed!" which although a friendly message,
 isn't what I would necessarily want when operating on a big project of name matching in SAS,
 or when partaking in record linkage.
 
 I'm also removing the check for the presence of the name suffixes JR(junior) and
-SR(senior), because they seem relatively arbitrary to me, and they may give one the impression 
-proper cleaning has taken place when a search for those two strings is likely to do "sweet F all" in
-the grand scheme of all possible suffix repairs.
+SR(senior), because they seem relatively arbitrary, and they may give one the impression 
+proper cleaning has taken place when a search for those two strings is likely to do "sweet-F-all" in
+the grand scheme of all possible standardisation and text repair.
 
 I ran basic checks using names from the test URL (available at the time of authorship)
 at http://www.dropby.com/NYSIISTextStrings.html
