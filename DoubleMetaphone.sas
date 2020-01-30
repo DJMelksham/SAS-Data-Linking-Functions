@@ -53,7 +53,7 @@ PROC FCMP outlib=CFUNC.DAMIENFUNCTIONS.STRINGCOMPS;
 					current=current+2;
 				ELSE current=current+1;
 			END;
-		ELSE IF letter='Ç' THEN
+		ELSE IF letter='Ã‡' THEN
 			DO;
 				DMPV1=compress(DMPV1||'S');
 				DMPV2=compress(DMPV2||'S');
@@ -545,15 +545,15 @@ PROC FCMP outlib=CFUNC.DAMIENFUNCTIONS.STRINGCOMPS;
 							SUBSTR(pre_pad,current+6-1,4) in ('ILLO','ILLA','ALLE')) 
 							OR 
 							(current>1 AND (SUBSTR(string_pad,s_length-1, 2) in ('AS', 'OS') OR 
-							SUBSTR(string_pad,s_length,1) in ('A','O')) AND 
-							SUBSTR(pre_pad,current+6-1,4)='ALLE') Then
+							SUBSTR(string_pad,s_length,1) in ('A','O'))) Then
 							do;
 								DMPV1=compress(DMPV1||'L');
-								DMPV2=compress(DMPV2||'L');
 								current=current+2;
 							end;
 						else
 							do;
+								DMPV1=compress(DMPV1||'L');
+								DMPV2=compress(DMPV2||'L');
 								current=current+2;
 							end;
 					end;
@@ -587,7 +587,7 @@ PROC FCMP outlib=CFUNC.DAMIENFUNCTIONS.STRINGCOMPS;
 				DMPV1=compress(DMPV1||'N');
 				DMPV2=compress(DMPV2||'N');
 			end;
-		Else If letter='Ñ' then
+		Else If letter='Ã‘' then
 			do;
 				current=current+1;
 				DMPV1=compress(DMPV1||'N');
