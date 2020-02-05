@@ -733,8 +733,8 @@ PROC FCMP outlib=CFUNC.DAMIENFUNCTIONS.STRINGCOMPS;
 									end;
 								ELSE
 									do;
-										IF (current=1) AND SUBSTR(string_pad,3,1) not in ('A','E','I','O','U','Y') AND 
-											SUBSTR(string_pad,3,1)^='W' then
+										IF (current=1) AND SUBSTR(string_pad,4,1) not in ('A','E','I','O','U','Y','W')
+										  then
 											do;
 												DMPV1=compress(DMPV1||'X');
 												DMPV2=compress(DMPV2||'S');
